@@ -20,6 +20,7 @@ body {
   color: white;
   text-align: center;
   text-transform: uppercase; 
+  height: 100px;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h2 {
@@ -43,12 +44,33 @@ body {
 }
 
 .pesquisa input{
-  margin-right: 50px;
-  padding: 20px;
+  padding: 23px;
 }
 
 .btn-secondary {
  margin:0 30px;
+}
+
+#mostra {
+  margin-left: 270px;
+}
+#esconde {
+  margin-left: 270px;
+}
+
+img#img_estacionar {
+  width: 200px;
+  height: 200px;
+  display: block;
+  float: left;
+  position: absolute;
+  left: 100px;
+
+}
+
+img {
+  width: 30px;
+  height: 30px;
 }
 
 /* Customize container */
@@ -96,6 +118,59 @@ body {
   display: none;
 }
 
+@media screen and (max-width: 830px){
+
+  .header {
+    height: 90px;
+  }
+
+  img#img_estacionar {
+    display: none;
+  }
+
+  .header h2 {    
+    font-size: 30px;
+    margin: 0px;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+
+  .header h2 {    
+    font-size: 17px;
+    margin: 0px;
+  }
+
+  #btn_pesquisa {
+    margin-right: 0px;
+  }
+
+#mostra {
+  margin-left: -50px;
+  position: absolute;
+  left: -150px;
+  float: left;
+
+}
+#esconde {
+  margin-left: -50px;
+  position: absolute;
+  left: -150px;
+  float: left;
+}
+
+
+@media screen and (max-width: 768px){
+
+#mostra {
+  margin-left: 350px;
+}
+#esconde {
+  margin-left: 350px;
+}
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
@@ -113,4 +188,5 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+
 }

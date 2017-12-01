@@ -78,7 +78,6 @@ function calculaHoras(placa, preco, horas, minutos) {
 	var minutos = parseInt(minutos);
 
 	var total = document.getElementById('total');
-	clear = document.getElementById('clear');
 
 	var date = new Date();
 	var horaAtual = parseInt(date.getHours());
@@ -113,7 +112,6 @@ function mostrarTudo(num) {
 		mostraPatio();		
 	}
 	document.getElementById('total').innerHTML = '';
-	document.getElementById('esconde').innerHTML = 'Esconder todos';
 	document.getElementById('tabela').style.display = "block";
 	document.getElementById('esconde').style.display = "inline-block";
 	document.getElementById('mostra').style.display = "none";
@@ -125,7 +123,6 @@ function escondeTudo() {
 	document.getElementById('mostra').style.display = "inline-block";
 	document.getElementById('esconde').style.display = "none";
 	document.getElementById('total').style.display = "none";
-	clear.style.display = "none";
 }
 
 function pesquisar() {	
@@ -147,13 +144,13 @@ function pesquisar() {
 			'<td>'+ placa + '</td>' +
 			'<td>'+ preco + '</td>' +
 			'<td>'+ hora + ':' + minutos + '</td>' +
-			'<td><button type="button" class="btn btn-primary" onclick="calculaHoras(\''+ placa +'\',\''+ preco +'\',\''+ hora +'\',\''+ minutos +'\')"> calcular R$ </button></td>'+
-			'<td><button type="button" class="btn btn-danger" onclick="confirma(\'' +placa + '\')" > Excluir</button></td>'+
+			'<td><button type="button" class="btn btn-primary" onclick="calculaHoras(\''+ placa +'\',\''+ preco +'\',\''+ hora +'\',\''+ minutos +'\')"><img src="icons/calculator.svg"> R$ </button></td>'+
+			'<td><button type="button" class="btn btn-danger" onclick="confirma(\'' +placa + '\')" ><img src="icons/minus.svg"> </button></td>'+
 			'</tr>';
 
-			mostrarTudo(0);
-			document.getElementById('esconde').innerHTML = 'Esconder';
+			document.getElementById('procurar').innerHTML = "";
 			document.getElementById('procurar').style.border= "none";
+			mostrarTudo(0);
 			return true;
 		} else{
 			document.getElementById('procurar').style.border= "2px solid red";
@@ -182,8 +179,8 @@ function mostraPatio(){
 		'<td>'+ placa + '</td>' +
 		'<td>'+ preco + '</td>' +
 		'<td>'+ hora + ':' + minutos + '</td>' +
-		'<td><button type="button" class="btn btn-primary" onclick="calculaHoras(\''+ placa +'\',\''+ preco +'\',\''+ hora +'\',\''+ minutos +'\')"> calcular R$ </button></td>'+
-		'<td><button type="button" class="btn btn-danger" onclick="confirma(\'' +placa + '\')" > Excluir</button></td>'+
+		'<td><button type="button" class="btn btn-primary" onclick="calculaHoras(\''+ placa +'\',\''+ preco +'\',\''+ hora +'\',\''+ minutos +'\')"><img src="icons/calculator.svg"> R$ </button></td>'+
+		'<td><button type="button" class="btn btn-danger" onclick="confirma(\'' +placa + '\')" > <img src="icons/minus.svg"></button></td>'+
 		'</tr>';
 	}
 }

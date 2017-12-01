@@ -9,6 +9,7 @@
 <body onload="mostraPatio()">
 
 	<div class=" header container-fluid">
+		<img id="img_estacionar" src="estacionar.png" alt="estacionar">
 		<h2>Estacionamento JS <small>por: Pedro Melo</small></h2>
 	</div>
 
@@ -30,7 +31,7 @@
 						<label>Preço por hora</label>
 						<input type="text" class="form-control" name="" id="precoHora" placeholder="Digite o valor por hora...">
 					</div>
-					<button type="submit" class="btn btn-primary">Adicionar</button>
+					<button type="submit" class="btn btn-primary"><img src="icons/plus.svg"></button>
 				</form>
 			</div>
 
@@ -38,9 +39,10 @@
 				<form class="form-inline" accept-charset="utf-8">
 					<div class="form-group">
 						<input type="text" name="" id="procurar" class="form-control form-control-lg">
-						<button type="button" onclick="pesquisar()" class="btn btn-info btn-lg">Pesquisar</button>
-						<button type="button" id="mostra" onclick="mostrarTudo(1)" class="btn btn-secondary btn-lg"> Mostrar todos</button>
-						<button type="button" id="esconde" onclick="escondeTudo()" class="btn btn-danger btn-lg"> Esconder todos</button>
+						<button type="button" id="btn_pesquisa" onclick="pesquisar()" class="btn btn-info btn-lg"><img src="icons/magnifying-glass.svg"></button>
+						<button type="button" id="mostra" onclick="mostrarTudo(1)" class="btn btn-secondary btn-lg"><img src="icons/chevron-bottom.svg"> </button>
+						<button type="button" id="esconde" onclick="escondeTudo()" class="btn btn-danger btn-lg">
+						<img src="icons/caret-top.svg"> </button>
 					</div>
 				</form>
 			</div>
